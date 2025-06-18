@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Protocol</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+ <header class="main-header">
+    <div class="header-content">
+      <h1>🔝 <span>Football Boost</span></h1>
+      <p>Drills and plans to level up your game ⚽</p>
+      <nav class="mobile-nav">
+  <div class="nav-header">
+  <h1 class="logo">⚡ Football Pro</h1>
+  <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+</div>
+
+
+
+  <div class="nav-links" id="navMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="drills.html">⚽ Drills</a>
+    <a href="fitness.html">💪 Fitness</a>
+    <a href="mindset.html">🧠 Game IQ</a>
+    <a href="plans.html">🎯 Training Plans</a>
+    <a href="gear.html">👟 Gear Guide</a>
+    <a href="nutrition.html">🍽️ Nutrition</a>
+    <a href="challenge.html">🏆 Challenges</a>
+    <a href="about.html">🧾 About</a>
+    <a href="quiz.html">🧠 Quiz</a>
+    <a href="progress.html">🧱 Skill Progress Tracker</a>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Fuel Like a Footballer</h1>
+    <p>Train hard? Eat smart. Here’s how to power your game</p>
+  </div>
+
+  <div class="section" data-aos="fade-left">
+    <h2>🥗 Pre-Training Snacks</h2>
+    <p>blueberries, Fruits, Cereal</p>
+  </div>
+
+    <div class="parallax-section" id="Train Like a Pro" style="background-image: url('https://images.unsplash.com/photo-1669989146656-5d9d38995eba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGhlYWx0aHklMjBmb29kJTIwb24lMjB0YWJsZXxlbnwwfHwwfHx8MA%3D%3D') ">
+    <h1>Abs are made in the kitchen. So is energy.</h1>
+  </div>
+
+   <div class="section" data-aos="fade-right">
+    <h2>🍌 Post-Training Recovery</h2>
+    <p>Banana, Dates</p>
+  </div>
+
+    <div class="section" data-aos="fade-left">
+    <h2>💧 Hydration Tips</h2>
+    <p>Drink lots of Water during matches but not too much at once (1 - 1.5 L)</p>
+  </div>
+
+  <div class="section" data-aos="fade-right">
+    <h2>📆 Weekly Meal Plan</h2>
+    <p>Do what works for you but make it healthy.</p>
+  </div>
+
+  <footer data-aos="fade-up">
+    <p>About | Contact | Instagram</p>
+    <p><em>“Train like you’re the worst. Play like you’re the best.”</em></p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <script>
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

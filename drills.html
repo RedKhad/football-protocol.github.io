@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Protocol</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+ <header class="main-header">
+    <div class="header-content">
+      <h1>🔝 <span>Football Boost</span></h1>
+      <p>Drills and plans to level up your game ⚽</p>
+      <nav class="mobile-nav">
+  <div class="nav-header">
+  <h1 class="logo">⚡ Football Pro</h1>
+  <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+</div>
+
+
+
+  <div class="nav-links" id="navMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="drills.html">⚽ Drills</a>
+    <a href="fitness.html">💪 Fitness</a>
+    <a href="mindset.html">🧠 Game IQ</a>
+    <a href="plans.html">🎯 Training Plans</a>
+    <a href="gear.html">👟 Gear Guide</a>
+    <a href="nutrition.html">🍽️ Nutrition</a>
+    <a href="challenge.html">🏆 Challenges</a>
+    <a href="about.html">🧾 About</a>
+    <a href="quiz.html">🧠 Quiz</a>
+    <a href="progress.html">🧱 Skill Progress Tracker</a>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Sharpen Your Skills</h1>
+    <p>Master the basics, dominate the field. Here's how.</p>
+  </div>
+
+  <div class="section" data-aos="fade-right" >
+    <h2>🔄 Ball Mastery</h2>
+    <p>Drill: 10 Touch Ball Control <br>
+✅ Inside touches, toe taps, sole rolls <br>
+💡 Why? Improves rhythm, balance, and control.</p>
+  </div>
+
+  <div class="section" data-aos="fade-left" >
+    <h2>🌀 Dribbling</h2>
+    <p>Drill: Cone Maze <br>
+✅ Quick feet between cones, tight turns <br>
+💡 Helps you beat defenders.</p>
+  </div>
+
+   <div class="parallax-section" id="Train Like a Pro" style="background-image: url('https://plus.unsplash.com/premium_photo-1684888759266-ce3768052c80?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') ">
+    <h1>Repetition creates instinct.</h1>
+  </div>
+
+  <div class="section" data-aos="fade-right" >
+    <h2>🧱 Passing</h2>
+    <p>Drill: Wall Pass Reps <br>
+✅ Pass & receive against a wall, both feet <br>
+💡 Builds technique and accuracy.</p>
+  </div>
+
+    <div class="section" data-aos="fade-left" >
+    <h2>🎯 Shooting</h2>
+    <p>Drill: 1-Touch Finishes <br>
+✅ Pass from friend → 1-touch shot on goal <br>
+💡 Focuses on quick finishing under pressure.</p>
+  </div>
+
+      <div class="section" data-aos="fade-right" >
+    <h2>💡 Coach’s Tip</h2>
+    <p><em>Start slow. Speed comes after control.</em></p>
+  </div>
+
+  <footer data-aos="fade-up">
+    <p>About | Contact | Instagram</p>
+    <p><em>“Train like you’re the worst. Play like you’re the best.”</em></p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <script>
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

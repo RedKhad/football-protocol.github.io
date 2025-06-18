@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Protocol</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+ <header class="main-header">
+    <div class="header-content">
+      <h1>🔝 <span>Football Boost</span></h1>
+      <p>Drills and plans to level up your game ⚽</p>
+      <nav class="mobile-nav">
+  <div class="nav-header">
+  <h1 class="logo">⚡ Football Pro</h1>
+  <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+</div>
+
+
+
+  <div class="nav-links" id="navMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="drills.html">⚽ Drills</a>
+    <a href="fitness.html">💪 Fitness</a>
+    <a href="mindset.html">🧠 Game IQ</a>
+    <a href="plans.html">🎯 Training Plans</a>
+    <a href="gear.html">👟 Gear Guide</a>
+    <a href="nutrition.html">🍽️ Nutrition</a>
+    <a href="challenge.html">🏆 Challenges</a>
+    <a href="about.html">🧾 About</a>
+    <a href="quiz.html">🧠 Quiz</a>
+    <a href="progress.html">🧱 Skill Progress Tracker</a>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Level Up Your Football Game</h1>
+    <p>Tips, drills, and plans to make you unstoppable.</p>
+    <nav class="nav-links">
+      <a href="#Training">Start Training</a>
+    </nav>
+  </div>
+
+  <div class="section" data-aos="fade-right" id="Training">
+    <h2>⚽ Football Drills</h2>
+    <p>Improve your ball control, passing, and shooting with step-by-step exercises.</p>
+        <nav class="nav-links">
+      <a href="drills.html">View Drills</a>
+    </nav>
+  </div>
+
+  <div class="section" data-aos="fade-left" >
+    <h2>💪 Fitness & Conditioning</h2>
+    <p>Get faster, stronger, and fitter with football-specific workouts.</p>
+    <nav class="nav-links">
+      <a href="fitness.html">View Workouts</a>
+    </nav>
+  </div>
+
+  <div class="section" data-aos="fade-right" >
+    <h2>🧠 Mindset & Strategy</h2>
+    <p>Stay confident, focused, and make smarter plays.</p>
+        <nav class="nav-links">
+      <a href="mindset.html">View Tips</a>
+    </nav>
+  </div>
+
+    <div class="section" data-aos="fade-left" >
+    <h2>🎯 Training Plans</h2>
+    <p>Follow weekly training routines for every level.</p>
+        <nav class="nav-links">
+      <a href="plans.html">View Plans</a>
+    </nav>
+  </div>
+
+      <div class="section" data-aos="fade-right" >
+    <h2>🍽️ Nutrition Page</h2>
+    <p>Fuel Like a Footballer</p>
+        <nav class="nav-links">
+      <a href="nutrition.html">View Plans</a>
+    </nav>
+  </div>
+
+  <div class="section" data-aos="fade-left" >
+    <h2>👟 Gear Guide</h2>
+    <p>What to Wear to Train Like a Beast</p>
+        <nav class="nav-links">
+      <a href="gear.html">View Plans</a>
+    </nav>
+  </div>
+
+    <div class="section" data-aos="fade-right" >
+    <h2>🏆 Challenges Page</h2>
+    <p>Prove Yourself</p>
+        <nav class="nav-links">
+      <a href="challenge.html">View Plans</a>
+    </nav>
+  </div>
+  
+      <div class="section" data-aos="fade-left" >
+    <h2>🧾 About Page</h2>
+    <p>Why This Site Exists</p>
+        <nav class="nav-links">
+      <a href="about.html">View Plans</a>
+    </nav>
+  </div>
+
+  <div class="section" data-aos="fade-right" >
+    <h2>🧠 Quiz</h2>
+    <p>What’s Your Football Level?</p>
+        <nav class="nav-links">
+      <a href="quiz.html">View Plans</a>
+    </nav>
+  </div>
+
+  <div class="section" data-aos="fade-left" >
+    <h2>🧱 Skill Progress Tracker</h2>
+        <nav class="nav-links">
+      <a href="progress.html">View Plans</a>
+    </nav>
+  </div>
+
+    <div class="parallax-section" id="Train Like a Pro" style="background-image: url('https://images.unsplash.com/photo-1489944440615-453fc2b6a9a9?q=80&w=1923&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') ">
+    <p>Winners Train. Losers Complain</p>
+  </div>
+
+  <footer data-aos="fade-up">
+    <p>About | Contact | Instagram</p>
+    <p><em>“Train like you’re the worst. Play like you’re the best.”</em></p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+  <script>
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

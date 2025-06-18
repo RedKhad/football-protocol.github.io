@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Protocol</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+ <header class="main-header">
+    <div class="header-content">
+      <h1>🔝 <span>Football Boost</span></h1>
+      <p>Drills and plans to level up your game ⚽</p>
+      <nav class="mobile-nav">
+  <div class="nav-header">
+  <h1 class="logo">⚡ Football Pro</h1>
+  <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+</div>
+
+
+
+  <div class="nav-links" id="navMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="drills.html">⚽ Drills</a>
+    <a href="fitness.html">💪 Fitness</a>
+    <a href="mindset.html">🧠 Game IQ</a>
+    <a href="plans.html">🎯 Training Plans</a>
+    <a href="gear.html">👟 Gear Guide</a>
+    <a href="nutrition.html">🍽️ Nutrition</a>
+    <a href="challenge.html">🏆 Challenges</a>
+    <a href="about.html">🧾 About</a>
+    <a href="quiz.html">🧠 Quiz</a>
+    <a href="progress.html">🧱 Skill Progress Tracker</a>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>Football Quiz too test your Knowledge</h1>
+  </div>
+
+  <section class="section">
+  <h2>🧠 What's Your Football Level?</h2>
+  <form id="quizForm" class="quiz-box">
+    <div class="quiz-question">
+      <p>1. How often do you train per week?</p>
+      <label><input type="radio" name="q1" value="1"> 1–2 times</label>
+      <label><input type="radio" name="q1" value="2"> 3–4 times</label>
+      <label><input type="radio" name="q1" value="3"> 5+ times</label>
+    </div>
+
+    <div class="quiz-question">
+      <p>2. How would you rate your game IQ?</p>
+      <label><input type="radio" name="q2" value="1"> Low</label>
+      <label><input type="radio" name="q2" value="2"> Average</label>
+      <label><input type="radio" name="q2" value="3"> High</label>
+    </div>
+
+    <div class="quiz-question">
+      <p>3. Have you played competitive matches?</p>
+      <label><input type="radio" name="q3" value="1"> Not yet</label>
+      <label><input type="radio" name="q3" value="2"> Sometimes</label>
+      <label><input type="radio" name="q3" value="3"> Regularly</label>
+    </div>
+
+    <button type="button" onclick="calculateLevel()">🧪 See My Level</button>
+    <p id="quizResult" class="quiz-result"></p>
+  </form>
+</section>
+
+
+  <footer data-aos="fade-up">
+    <p>About | Contact | Instagram</p>
+    <p><em>“Train like you’re the worst. Play like you’re the best.”</em></p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+  <script>
+function calculateLevel() {
+  const q1 = parseInt(document.querySelector('input[name="q1"]:checked')?.value || 0);
+  const q2 = parseInt(document.querySelector('input[name="q2"]:checked')?.value || 0);
+  const q3 = parseInt(document.querySelector('input[name="q3"]:checked')?.value || 0);
+  const total = q1 + q2 + q3;
+
+  let result = "❗ Please answer all questions.";
+  if (total > 0 && total <= 4) result = "👶 Beginner – Let's build your foundation!";
+  else if (total <= 6) result = "⚡ Intermediate – You’re on the rise!";
+  else if (total <= 9) result = "🥷 Advanced – You’re match-ready!";
+
+  document.getElementById('quizResult').textContent = result;
+}
+</script>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.classList.toggle("show");
+}
+</script>
+
+</body>
+</html>

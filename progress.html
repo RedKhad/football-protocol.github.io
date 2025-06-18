@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Football Protocol</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="nav.css">
+  <link rel="stylesheet" href="style.css">
+  </head>
+<body>
+ <header class="main-header">
+    <div class="header-content">
+      <h1>🔝 <span>Football Boost</span></h1>
+      <p>Drills and plans to level up your game ⚽</p>
+      <nav class="mobile-nav">
+  <div class="nav-header">
+  <h1 class="logo">⚡ Football Pro</h1>
+  <button class="nav-toggle" onclick="toggleMenu()">☰</button>
+</div>
+
+
+
+  <div class="nav-links" id="navMenu">
+    <a href="index.html">🏠 Home</a>
+    <a href="drills.html">⚽ Drills</a>
+    <a href="fitness.html">💪 Fitness</a>
+    <a href="mindset.html">🧠 Game IQ</a>
+    <a href="plans.html">🎯 Training Plans</a>
+    <a href="gear.html">👟 Gear Guide</a>
+    <a href="nutrition.html">🍽️ Nutrition</a>
+    <a href="challenge.html">🏆 Challenges</a>
+    <a href="about.html">🧾 About</a>
+    <a href="quiz.html">🧠 Quiz</a>
+    <a href="progress.html">🧱 Skill Progress Tracker</a>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+  <div class="hero">
+    <h1>
+        Skill Progress Tracker 
+    </h1>
+  </div>
+
+<section class="progress-tracker">
+  <h2>🧱 Skill Progress Tracker</h2>
+  <ul class="checklist" id="skillChecklist">
+    <li><label><input type="checkbox" data-skill="touch"> ⚽ First Touch</label></li>
+    <li><label><input type="checkbox" data-skill="pass"> 🎯 Passing Accuracy</label></li>
+    <li><label><input type="checkbox" data-skill="shoot"> 🚀 Shooting Power</label></li>
+    <li><label><input type="checkbox" data-skill="iq"> 🧠 Game Awareness</label></li>
+    <li><label><input type="checkbox" data-skill="speed"> 🏃‍♂️ Speed & Fitness</label></li>
+    <li><label><input type="checkbox" data-skill="defense"> 🛡️ Defending Skills</label></li>
+  </ul>
+  <div class="progress-bar-container">
+  <div class="progress-bar" id="skillProgressBar"></div>
+</div>
+<p id="completionMessage" style="margin-top: 15px; font-weight: bold;"></p>
+</section>
+
+
+<footer data-aos="fade-up">
+    <p>About | Contact | Instagram</p>
+    <p><em>“Train like you’re the worst. Play like you’re the best.”</em></p>
+  </footer>
+
+  <!-- AOS Script -->
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: true
+    });
+  </script>
+
+ <script>
+document.addEventListener("DOMContentLoaded", () => {
+  const checklist = document.getElementById("skillChecklist");
+  const checkboxes = checklist.querySelectorAll("input[type='checkbox']");
+  const progressBar = document.getElementById("skillProgressBar");
+  const message = document.getElementById("completionMessage");
+
+  // Load and apply saved progress
+  checkboxes.forEach(cb => {
+    const skill = cb.dataset.skill;
+    cb.checked = localStorage.getItem(skill) === "true";
+  });
+
+  function updateProgress() {
+    let checked = 0;
+    checkboxes.forEach(cb => {
+      if (cb.checked) checked++;
+    });
+
+    const percentage = Math.round((checked / checkboxes.length) * 100);
+    progressBar.style.width = `${percentage}%`;
+
+    // Save progress
+    checkboxes.forEach(cb => {
+      localStorage.setItem(cb.dataset.skill, cb.checked);
+    });
+
+    // Show badge
+    if (percentage === 100) {
+      message.textContent = "🏆 All skills complete! You're fully unlocked!";
+      message.style.color = "#2e7d32";
+    } else {
+      message.textContent = `${percentage}% complete`;
+      message.style.color = "#333";
+    }
+  }
+
+  // Initial load
+  updateProgress();
+
+  // On change
+  checkboxes.forEach(cb => {
+    cb.addEventListener("change", updateProgress);
+  });
+});
+</script>
+<script>
+function toggleMenu() {
+  const menu = document.getElementById("navMenu");
+  menu.classList.toggle("show");
+}
+</script>
+
+
+
+</body>
+</html>
