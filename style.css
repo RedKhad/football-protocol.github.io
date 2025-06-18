@@ -178,6 +178,11 @@ html{
 
 
 
+@media (max-width: 768px) {
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}
 
 
 
