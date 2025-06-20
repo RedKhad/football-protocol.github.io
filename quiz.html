@@ -200,6 +200,23 @@ function toggleMenu() {
   menu.classList.toggle("show");
 }
 </script>
+  <script>
+  document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.preventDefault();
+      // Close all others
+      document.querySelectorAll('.dropdown-content').forEach(content => {
+        if (content !== this.nextElementSibling) {
+          content.style.display = 'none';
+        }
+      });
+      // Toggle current
+      const content = this.nextElementSibling;
+      content.style.display = content.style.display === 'block' ? 'none' : 'block';
+    });
+  });
+</script>
+
 
 </body>
 </html>
