@@ -177,7 +177,24 @@ function toggleMenu() {
     });
   });
 </script>
- 
+ <script>
+  function toggleNav() {
+    const nav = document.getElementById("mainNav");
+    nav.classList.toggle("show");
+  }
+
+  // Dropdown toggles (for mobile click)
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        const content = this.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  });
+</script>
+
 
 
 
