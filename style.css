@@ -577,3 +577,40 @@ html{
     margin-top: 10px;
   }
 }
+
+/* Desktop: show standalone home-link */
+.home-link {
+  display: inline-block;
+  background: #ff6b3d;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-bottom: 10px;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  /* Hide standalone home-link on mobile */
+  .home-link {
+    display: none;
+  }
+
+  /* Hide mobile-home link by default */
+  .mobile-home {
+    display: none;
+  }
+
+  /* Show inside nav when burger is open */
+  .nav-links.show .mobile-home {
+    display: block;
+    background: #ff6b3d;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin: 10px 0 0;
+    font-weight: bold;
+    text-decoration: none;
+  }
+}
