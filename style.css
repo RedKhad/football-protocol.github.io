@@ -508,11 +508,21 @@ html{
   right: 20px;
   z-index: 2000;
   cursor: pointer;
+  display: none;
 }
 
 @media (max-width: 768px) {
   .burger {
     display: block;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2000;
+    cursor: pointer;
   }
 
   .nav-links {
