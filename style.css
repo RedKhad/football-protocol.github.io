@@ -594,12 +594,12 @@ html{
 @media (max-width: 768px) {
   /* Hide standalone home-link on mobile */
   .home-link {
-    display: block;
+    display: none;
   }
 
   /* Hide mobile-home link by default */
   .mobile-home {
-    display: block;
+    display: none;
   }
 
   /* Show inside nav when burger is open */
@@ -612,6 +612,9 @@ html{
     margin: 10px 0 0;
     font-weight: bold;
     text-decoration: none;
+  }
+  .home-link{
+  display: block;
   }
 }
 
