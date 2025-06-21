@@ -35,6 +35,30 @@ body {
   margin-bottom: 20px;
 }
 
+/* Desktop: Home link is visible */
+.home-link {
+  background-color: #ff6b3d;
+  color: white;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* Mobile: Hide home link outside the burger */
+@media (max-width: 768px) {
+  .home-link {
+    display: none;
+  }
+
+  /* Optional: Show Home inside burger if you also keep it there */
+  .nav-links a[href="index.html"] {
+    display: block;
+  }
+}
+
 .section a {
   color: #ff6e40;
   text-decoration: none;
