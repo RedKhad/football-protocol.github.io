@@ -497,3 +497,44 @@ html{
   }
 }
 
+.burger {
+  display: none;
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2000;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #26425A;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 1500;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: relative;
+    display: none;
+    background-color: #2c4d6a;
+    margin-top: 10px;
+  }
+}
