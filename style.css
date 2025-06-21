@@ -333,16 +333,21 @@ html{
 @media (max-width: 768px) {
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    text-align: center;
-    gap: 10px;
-    padding-top: 10px;
-  }
+  display: none;
+  flex-direction: column;
+  background-color: #26425A;
+  padding: 20px;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  width: 100%;
+  z-index: 1500;
+}
 
-  .nav-links.show {
-    display: flex;
-  }
+.nav-links.show {
+  display: flex;
+}
+
 }
 
 .nav-header {
